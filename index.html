@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>bg</title>
+<style>
+  :root { --bg: #ffffff; --fg: #16181d; --muted: #5b6270; --line: #d9dde3; --accent: #0b57d0; --card: #f5f7fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14161a; --fg: #eceef2; --muted: #9aa2b1; --line: #2c313a; --accent: #8ab4f8; --card: #1c1f25; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 18px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  p.lead { color: var(--muted); margin: 0 0 24px; }
+  ol { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+  ol > li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 16px 56px; margin-bottom: 12px; position: relative; }
+  ol > li::before { content: counter(step); position: absolute; left: 16px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--bg); font-weight: 700; display: grid; place-items: center; }
+  a.btn { display: inline-block; margin-top: 8px; padding: 10px 16px; border-radius: 8px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 600; }
+  .hint { font-family: ui-monospace, Consolas, monospace; font-size: 1.25rem; letter-spacing: 0.15em; margin-top: 8px; }
+  small { color: var(--muted); display: block; margin-top: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Break glass</h1>
+  <p class="lead">Use a private / incognito window. Three steps.</p>
+  <ol>
+    <li>
+      <strong>Download the file.</strong><br>
+      <a class="btn" href="break-glass.kdbx" download>Download break-glass.kdbx</a>
+    </li>
+    <li>
+      <strong>Open the opener, click <em>Open</em>, and choose that file.</strong><br>
+      <a class="btn" href="app/" target="_blank" rel="noopener">Open the opener</a>
+      <small>Runs in this browser only. Nothing is uploaded.</small>
+    </li>
+    <li>
+      <strong>Type the passphrase and press Enter.</strong>
+      <!-- HINT: add <div class="hint">…</div> here once chosen -->
+      <small>Then read the entry named “0 - READ FIRST”.</small>
+    </li>
+  </ol>
+  <p class="lead" style="margin-top:24px">When finished: close both tabs, delete the downloaded file, close the private window.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# This repo is public. Ignore everything, then allow only the files meant to be published.
+*
+!.gitignore
+!.gitattributes
+!.nojekyll
+!README.md
+!index.html
+!break-glass.kdbx
+!app/
+!app/index.html
