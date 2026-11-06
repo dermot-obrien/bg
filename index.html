@@ -19,6 +19,7 @@
   ol > li { counter-increment: step; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 16px 56px; margin-bottom: 12px; position: relative; }
   ol > li::before { content: counter(step); position: absolute; left: 16px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--bg); font-weight: 700; display: grid; place-items: center; }
   a.btn { display: inline-block; margin-top: 8px; padding: 10px 16px; border-radius: 8px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 600; }
+  a.btn.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
   .hint { font-family: ui-monospace, Consolas, monospace; font-size: 1.25rem; letter-spacing: 0.15em; margin-top: 8px; }
   small { color: var(--muted); display: block; margin-top: 6px; }
 </style>
@@ -29,8 +30,10 @@
   <p class="lead">Use a private / incognito window. Three steps.</p>
   <ol>
     <li>
-      <strong>Download the file.</strong><br>
-      <a class="btn" href="break-glass.kdbx" download>Download break-glass.kdbx</a>
+      <strong>Download one file.</strong><br>
+      <a class="btn" href="emergency.kdbx" download>Emergency info (helping someone)</a>
+      <a class="btn alt" href="break-glass.kdbx" download>Break glass (owner only)</a>
+      <small>Helping someone? Use the first button. They will tell you the password.</small>
     </li>
     <li>
       <strong>Open the opener, click <em>Open</em>, and choose that file.</strong><br>
@@ -38,9 +41,10 @@
       <small>Runs in this browser only. Nothing is uploaded.</small>
     </li>
     <li>
-      <strong>Type the passphrase and press Enter.</strong>
+      <strong>Type the password and press Enter.</strong>
+      <small>Then read the first entry in the list (it starts with “0”).</small>
+      <small>Owner hint for the break glass file:</small>
       <div class="hint">t r i a n ... t i n t a</div>
-      <small>Then read the entry named “0 - READ FIRST”.</small>
     </li>
   </ol>
   <p class="lead" style="margin-top:24px">When finished: close both tabs, delete the downloaded file, close the private window.</p>
